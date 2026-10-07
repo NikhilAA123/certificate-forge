@@ -17,6 +17,20 @@ Normal and maximum-length-style certificate examples were rendered and visually 
 
 ## Reproduce performance measurements
 
+The final local run completed **1,000 certificates in 99.97 seconds** with one worker. The test suite was stopped during this run.
+
+| Measurement | Result |
+|---|---|
+| Submission latency p50 | 301.42 ms |
+| Submission latency p95 | 449.45 ms |
+| Submission latency maximum | 459.25 ms |
+| Status latency p50 | 38.99 ms |
+| Status latency p95 | 52.44 ms |
+| End-to-end certificate throughput | 10.00 per second |
+| Completed certificates | 1,000 of 1,000 |
+
+See [raw benchmark results](performance-results.json) for environment details and workload parameters. Submission percentiles contain only 10 observations; use more jobs for a statistically stronger latency estimate. Earlier development runs varied, so these figures describe this run rather than a guaranteed improvement or capacity limit.
+
 ```bash
 python scripts/benchmark.py --jobs 10 --recipients 100 --concurrency 4
 ```

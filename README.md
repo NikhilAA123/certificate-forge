@@ -15,6 +15,7 @@ Requires Python 3.12 or later. No Redis, Docker, database server, or external ac
 Windows PowerShell:
 
 ```powershell
+git clone https://github.com/NikhilAA123/certificate-forge.git
 cd certificate-forge
 py -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -c requirements.lock -e ".[dev]"
@@ -24,6 +25,8 @@ py -m venv .venv
 macOS or Linux:
 
 ```bash
+git clone https://github.com/NikhilAA123/certificate-forge.git
+cd certificate-forge
 python3 -m venv .venv
 .venv/bin/python -m pip install -c requirements.lock -e '.[dev]'
 .venv/bin/python -m certificate_forge

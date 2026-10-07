@@ -1,0 +1,27 @@
+{
+  "environment": {
+    "python": "3.14.6",
+    "platform": "Windows-11-10.0.26100-SP0",
+    "cpu_count": 12
+  },
+  "workload": {
+    "jobs": 10,
+    "recipients_per_job": 100,
+    "concurrency": 4,
+    "workers": 1
+  },
+  "submission_ms": {
+    "p50": 301.42,
+    "p95": 449.45,
+    "max": 459.25
+  },
+  "status_ms": {
+    "p50": 38.99,
+    "p95": 52.44
+  },
+  "submission_elapsed_seconds": 0.861,
+  "end_to_end_seconds": 99.968,
+  "certificates_per_second": 10.0,
+  "completed_certificates": 1000,
+  "note": "Localhost measurement; one run, not a production SLA."
+}

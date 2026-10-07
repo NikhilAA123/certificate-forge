@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "certificate-forge"
+version = "1.0.0"
+description = "A durable bulk certificate API with per-recipient outcomes."
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi>=0.115,<1",
+  "uvicorn>=0.34,<1",
+  "pydantic>=2.10,<3",
+  "email-validator>=2.2,<3",
+  "reportlab>=4.3,<5",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.3,<10", "httpx>=0.28,<1", "pypdf>=5,<7", "ruff>=0.11,<1"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]

@@ -1,0 +1,10 @@
+{
+  "title": "Backend Engineering Foundations",
+  "issuer": "Engineering Learning Lab",
+  "issued_on": "2026-10-07",
+  "recipients": [
+    {"name": "Aarav Sharma", "email": "aarav@example.com"},
+    {"name": "Maya Rao", "email": "maya@example.com"},
+    {"name": "Invalid Example", "email": "not-an-email"}
+  ]
+}
